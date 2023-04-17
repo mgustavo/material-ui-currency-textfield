@@ -1,6 +1,6 @@
 {
   "name": "@mgustavo/material-ui-currency-textfield",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Currency input textfield for react with Material-ui style",
   "keywords": [
     "material design",
@@ -16,11 +16,17 @@
   "homepage": "https://github.com/mgustavo/material-ui-currency-textfield",
   "scripts": {
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "deploy": "gh-pages -d styleguide",
+    "transpile": "babel src/components/CurrencyTextField -d dist --copy-files",
+    "prepublishOnly": "npm run transpile",
+    "publish-demo": "npm run build && npm run deploy"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mgustavo/material-ui-currency-textfield"
+    "url": "https://github.com/mgustavo/material-ui-currency-textfield.git"
   },
   "author": "mgustavo",
   "license": "MIT",
