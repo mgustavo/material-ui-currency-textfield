@@ -25,7 +25,8 @@ class CurrencyTextField extends React.Component {
   }
 
   componentDidMount() {
-    const { currencySymbol, inputRef, ...others } = this.props
+    const { currencySymbol, ...others } = this.props;
+
     this.autonumeric = new AutoNumeric(this.input, this.props.value, {
       ...this.props.preDefined,
       ...others,
@@ -67,7 +68,6 @@ class CurrencyTextField extends React.Component {
     const {
       classes,
       currencySymbol,
-      inputRef,
       inputProps,
       InputProps,
       ...others
@@ -103,7 +103,7 @@ class CurrencyTextField extends React.Component {
 
     return (
       <TextField
-        inputRef={inputRef}
+        inputRef={ref => (this.input = ref)}
         onChange={e => this.callEventHandler(e, "onChange")}
         onFocus={e => this.callEventHandler(e, "onFocus")}
         onBlur={e => this.callEventHandler(e, "onBlur")}

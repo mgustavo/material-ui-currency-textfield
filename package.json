@@ -1,6 +1,6 @@
 {
   "name": "@mgustavo/material-ui-currency-textfield",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Currency input textfield for react with Material-ui style",
   "keywords": [
     "material design",
@@ -15,8 +15,8 @@
   "typings": "./dist/index.d.ts",
   "homepage": "https://github.com/mgustavo/material-ui-currency-textfield",
   "scripts": {
-    "build": "rollup -c",
-    "start": "rollup -c -w",
+    "build": "rollup -c --bundleConfigAsCjs",
+    "start": "rollup -c -w --bundleConfigAsCjs",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "deploy": "gh-pages -d styleguide",
@@ -31,8 +31,8 @@
   "author": "mgustavo",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "prop-types": "^15.8.1",
     "@mui/material": "^5.12.0"
   },
@@ -47,7 +47,7 @@
     "@babel/preset-react": "^7.18.6",
     "@mui/material": "^5.12.0",
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.35",
+    "@types/react": "^18.0.37",
     "babel-core": "^6.26.3",
     "babel-loader": "^9.1.2",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -61,8 +61,8 @@
     "gh-pages": "^5.0.0",
     "node-sass": "^8.0.0",
     "prop-types": "^15.8.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
     "react-select": "^5.7.2",
     "react-styleguidist": "^13.1.1",
